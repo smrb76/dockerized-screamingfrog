@@ -4,9 +4,9 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 RUN apt update && apt upgrade -y
 RUN apt install ttf-mscorefonts-installer sudo wget xdg-utils \
     libgconf-2-4 zenity fonts-wqy-zenhei xvfb libgtk2.0-0 libnss3 libxss1 -y
-RUN wget https://download.screamingfrog.co.uk/products/seo-spider/screamingfrogseospider_18.1_all.deb
-RUN dpkg -i screamingfrogseospider_18.1_all.deb
-RUN rm screamingfrogseospider_18.1_all.deb
+RUN wget https://download.screamingfrog.co.uk/products/seo-spider/screamingfrogseospider_19.4_all.deb
+RUN dpkg -i screamingfrogseospider_19.4_all.deb
+RUN rm screamingfrogseospider_19.4_all.deb
 
 RUN mkdir /root/.ScreamingFrogSEOSpider
 RUN touch /root/.ScreamingFrogSEOSpider/spider.config
